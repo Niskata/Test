@@ -7,7 +7,7 @@
 
  ## ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=5DE23C&lines=NepBotz+Multi+device+Whatsapp+Bot;Created+By+Neptune;Don't+forget+to+give+a+star)
  
- [ Multi Device working whatsapp bot](https://github.com/Nep-28/Nepbotz-MD) created by [Neptune](github.com/nep-28)
+ [ Multi Device working whatsapp bot](https://github.com/Nep-28/NepBotz-MD-1) created by [Neptune](github.com/nep-28)
 
  <a href="https://github.com/nep-28"><img title="Author" src="https://img.shields.io/badge/Author-neptune-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>
 
@@ -30,11 +30,11 @@
 
 ## ```SETTINGS```
 
-- CHANGE OWNER NUMBER VCARD [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L58)
-- CHANGE OWNER NUMBER MENU [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L65)
-- CHANGE OWNER NUMBER TAG [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L66)
-- CHANGE OWNER NAME [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L59)
-- CHANGE BOT NAME [Here](https://github.com/DGXeon/CheemsBot-MD4/blob/master/settings.js#L67)
+- CHANGE OWNER NUMBER VCARD [Here](https://github.com/Nep-28/NepBotz-MD-1/blob/master/settings.js#L58)
+- CHANGE OWNER NUMBER MENU [Here](https://github.com/Nep-28/NepBotz-MD-1/blob/master/settings.js#L65)
+- CHANGE OWNER NUMBER TAG [Here](https://github.com/Nep-28/NepBotz-MD-1/blob/master/settings.js#L66)
+- CHANGE OWNER NAME [Here](https://github.com/Nep-28/NepBotz-MD-1/blob/master/settings.js#L59)
+- CHANGE BOT NAME [Here](https://github.com/Nep-28/NepBotz-MD-1/blob/master/settings.js#L67)
 
 ## ```BUILDPACKS```
 
@@ -49,10 +49,10 @@ https://github.com/clhuang/heroku-buildpack-webp-binaries.git
  
  ## ```Deploy to heroku```
  
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nep-28/Nepbotz-Md)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nep-28/NepBotz-MD-1)
 
 ## ```Tutorial```
-- ➤ First Fork This Repository By Clicking [Here](https://github.com/Nep-28/NepBotz-MD/fork)
+- ➤ First Fork This Repository By Clicking [Here](https://github.com/Nep-28/NepBotz-MD-1/fork)
 - ➤ After That Scan The QR Code By Clicking [here](https://replit.com/@SahasRandil/NepBotz-Multi-Device-Qr-Code-Generator?output%20only=1&lite=1#index.js)
 - ➤ Next Deploy The Bot By clicking [Here](https://heroku.com/deploy)
 - ➤ Wait 2-5 Minutes To Deploy
