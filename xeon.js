@@ -165,7 +165,7 @@ let docs = pickRandom(documents)
 //welcome\\
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+XeonWlcm = await getBuffer(`https://telegra.ph/file/36b6f874d2162b2891f52.jpg`)
 XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
@@ -174,16 +174,21 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
-   └───────────────┈ ⳹`
+                xeonbody = `╭┅═┅❖
+┃「 𝗛𝗶 」
+╰┅═┅❖
+╭┅═┅═┅═┅═┅═┅═┅ ⪨
+┃➣╭━━ ⪩『@${xeonName.split("@")[0]}』
+┃➣|〆 Welcome to
+┃➣|〆 ${metadata.subject}
+┃➣|〆 
+┃➣|〆 Member
+┃➣|〆 ${xmembers}th 
+┃➣|〆
+┃➣|〆 Joined
+┃➣|〆 ${xtime} ${xdate}
+┃么|〆
+╰┅═┅═┅═┅═┅═┅═┅ ⪨`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
