@@ -165,7 +165,7 @@ let docs = pickRandom(documents)
 //welcome\\
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`https://telegra.ph/file/36b6f874d2162b2891f52.jpg`)
+XeonWlcm = await getBuffer(`${encodeURIComponent(ppuser)}`)
 XeonLft = await getBuffer(`${encodeURIComponent(ppuser)}`)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
