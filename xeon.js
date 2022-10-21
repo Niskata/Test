@@ -193,7 +193,8 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
+{buttonId: `rules`, buttonText: {displayText: 'rules'}, type: 1},
+{buttonId: `command`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
@@ -240,19 +241,15 @@ let buttons = [
 {buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-mimetype: docs,
+image: fs.readFileSync('./XeonMedia/theme/log0.jpg'),
 jpegThumbnail:XeonLft,
 mentions: [num],
-fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
 caption: xeonbody,
 footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `Bye! my friend, take care.`,
 mediaType:2,
 thumbnail: XeonLft,
 sourceUrl: `${websitex}`,
