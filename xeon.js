@@ -179,13 +179,13 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 ╰┅═┅❖
 ╭┅═┅═┅═┅═┅═┅═┅ ⪨
 ┃➣╭━━ ⪩『@${xeonName.split("@")[0]}』
-┃➣|〆 Welcome to
+┃➣|〆 Welcome to:
 ┃➣|〆 ${metadata.subject}
 ┃➣|〆 
-┃➣|〆 Member
+┃➣|〆 Member:
 ┃➣|〆 ${xmembers}th 
 ┃➣|〆
-┃➣|〆 Joined
+┃➣|〆 Time:
 ┃➣|〆 ${xtime} ${xdate}
 ┃么|〆
 ╰┅═┅═┅═┅═┅═┅═┅ ⪨`
@@ -197,19 +197,15 @@ let buttons = [
 {buttonId: `command`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'),
-mimetype: docs,
+image: fs.readFileSync('./XeonMedia/theme/wc.jpg'),
 jpegThumbnail:XeonWlcm,
 mentions: [num],
-fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
 caption: xeonbody,
 footer: `${botname}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `Don't forget to read group description`,
 mediaType:2,
 thumbnail: XeonWlcm,
 sourceUrl: `${websitex}`,
@@ -224,24 +220,30 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
-   └───────────────┈ ⳹`
+                    xeonbody = `╭┅═┅❖
+┃「 Goodbye」
+╰┅═┅❖
+╭┅═┅═┅═┅═┅═┅═┅ ⪨
+┃➣╭━━ ⪩『@${xeonName.split("@")[0]}』
+┃➣|〆 Left from:
+┃➣|〆 ${metadata.subject}
+┃➣|〆 
+┃➣|〆 Member:
+┃➣|〆 ${xmembers}th 
+┃➣|〆
+┃➣|〆 Time:
+┃➣|〆 ${xtime} ${xdate}
+┃么|〆
+╰┅═┅═┅═┅═┅═┅═┅ ⪨`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `wkwkwk`, buttonText: {displayText: 'Sayonara 🥀'}, type: 1}
+{buttonId: `wkwwk`, buttonText: {displayText: 'Bye'}, type: 1},
+{buttonId: `command`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
-image: fs.readFileSync('./XeonMedia/theme/log0.jpg'),
+image: fs.readFileSync('./XeonMedia/theme/gb.jpg'),
 jpegThumbnail:XeonLft,
 mentions: [num],
 fileLength: 99999999999999,
