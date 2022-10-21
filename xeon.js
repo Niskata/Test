@@ -225,14 +225,14 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 ╰┅═┅❖
 ╭┅═┅═┅═┅═┅═┅═┅ ⪨
 ┃➣╭━━ ⪩『@${xeonName.split("@")[0]}』
-┃➣|〆 Left from:
+┃➣|〆 Left
 ┃➣|〆 ${metadata.subject}
 ┃➣|〆 
-┃➣|〆 Member:
-┃➣|〆 ${xmembers}th 
+┃➣|〆 Member
+┃➣|〆 ${xeonmembers}th 
 ┃➣|〆
 ┃➣|〆 Time:
-┃➣|〆 ${xtime} ${xdate}
+┃➣|〆 ${xeontime} ${xeondate}
 ┃么|〆
 ╰┅═┅═┅═┅═┅═┅═┅ ⪨`
       //if you copy the code value,
