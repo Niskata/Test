@@ -166,7 +166,7 @@ let docs = pickRandom(documents)
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
 XeonWlcm = await getBuffer(`https://telegra.ph/file/36b6f874d2162b2891f52.jpg`)
-XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/d460e086f9f9bf6b04e17.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+XeonLft = await getBuffer(`${encodeURIComponent(ppuser)}`)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
@@ -175,7 +175,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 xeonbody = `╭┅═┅❖
-┃「 𝗛𝗶 」
+┃「 Hi 」
 ╰┅═┅❖
 ╭┅═┅═┅═┅═┅═┅═┅ ⪨
 ┃➣╭━━ ⪩『@${xeonName.split("@")[0]}』
