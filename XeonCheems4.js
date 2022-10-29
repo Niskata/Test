@@ -8030,6 +8030,8 @@ break
 case 'dlytv': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
+ let yts = require("yt-search")
+ let search = await yts(text)
  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
  let ytvc = await hx.youtube(anu.url)
  let buttons = [
@@ -8066,12 +8068,14 @@ case 'dlytv': {
  case 'dlyta': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
+ let yts = require("yt-search")
+ let search = await yts(text)
  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
  let ytvc = await hx.youtube(anu.url)
  let buttons = [
  {buttonId: `ytmp3 ${anu.url} 128kbps`, buttonText: {displayText: 'Audio'}, type: 1},
- {buttonId: `ytmp4 ${anu.url} 480p`, buttonText: {displayText: '480P'}, type: 1},
- {buttonId: `docmp3 ${anu.url} 720p`, buttonText: {displayText: 'Doc Audio'}, type: 1}
+ {buttonId: `ytmp3 ${anu.url} 480p`, buttonText: {displayText: '480P'}, type: 1},
+ {buttonId: `docmp3 ${anu.url}`, buttonText: {displayText: 'Doc Audio'}, type: 1}
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
