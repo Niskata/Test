@@ -8081,12 +8081,14 @@ case 'video': {
  image: { url: anu.thumbnail },
  caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
  ┌─────────❖
- │🧚‍♀️➤ Select the qulity
- │🧚‍♀️➤ And wait
- │
- │🧚‍♀️➤ If you didn't get the  
- │🧚‍♀️➤ YouTube video,
- │🧚‍♀️➤ Try .ytmp4 (ytvideo link) 360p
+ │🧚‍♀️➤ Title : ${anu.title}
+ │🧚‍♀️➤ Ext : Search
+ │🧚‍♀️➤ ID : ${anu.videoId}
+ │🧚‍♀️➤ Duration : ${anu.timestamp}
+ │🧚‍♀️➤ Viewers : ${anu.views}
+ │🧚‍♀️➤ Uploaded : ${anu.ago}
+ │🧚‍♀️➤ Author : ${anu.author.name}
+ │🧚‍♀️➤ Url : ${anu.url}
  └─────────❖`,
  footer: `${global.footer}`,
  buttons: buttons,
@@ -8118,12 +8120,14 @@ case 'video': {
  image: { url: anu.thumbnail },
  caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
  ┌─────────❖
- │🧚‍♀️➤ Select the qulity
- │🧚‍♀️➤ And wait
- │
- │🧚‍♀️➤ If you didn't get the  
- │🧚‍♀️➤ audio,
- │🧚‍♀️➤ Try .ytmp3 (ytvideo link) 128kbps
+ │🧚‍♀️➤ Title : ${anu.title}
+ │🧚‍♀️➤ Ext : Search
+ │🧚‍♀️➤ ID : ${anu.videoId}
+ │🧚‍♀️➤ Duration : ${anu.timestamp}
+ │🧚‍♀️➤ Viewers : ${anu.views}
+ │🧚‍♀️➤ Uploaded : ${anu.ago}
+ │🧚‍♀️➤ Author : ${anu.author.name}
+ │🧚‍♀️➤ Url : ${anu.url}
  └─────────❖`,
  footer: `${global.footer}`,
  buttons: buttons,
