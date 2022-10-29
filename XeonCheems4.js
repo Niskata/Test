@@ -7875,7 +7875,7 @@ case 'ttaudxx':{
     XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
    }
  break
-case 'play': case 'music': case 'yt': case 'ytplay':{
+case 'play': case 'music': case 'ytxxx': case 'ytplay':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let { yta } = require('./lib/y2mate')
@@ -7899,7 +7899,6 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
 const buttons = [
   {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Audio'}, type: 1},
   {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: 'Video'}, type: 1},
-  {buttonId: `docmp3 ${anu.url}`, buttonText: {displayText: 'Document'}, type: 1}
 ]
 const buttonMessage = {
     image: buf,
@@ -8027,6 +8026,45 @@ mediaUrl:websitex,
 sourceUrl: websitex }}}, {quoted: m})
 }
 break
+case 'yt': {
+    if (isBan) return reply(mess.ban)	 			
+ if (isBanChat) return reply(mess.banChat)
+ let yts = require("yt-search")
+ let search = await yts(text)
+ let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+ let ytvc = await hx.youtube(anu.url)
+ let buttons = [
+ {buttonId: `dlytv ${anu.url}`, buttonText: {displayText: 'Video'}, type: 1},
+ {buttonId: `dlyta ${anu.url}`, buttonText: {displayText: 'Audio'}, type: 1}
+ ]
+ let buttonMessage = {
+ image: { url: anu.thumbnail },
+ caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
+ ┌─────────❖
+ │🧚‍♀️➤ Title : ${anu.title}
+ │🧚‍♀️➤ Ext : Search
+ │🧚‍♀️➤ ID : ${anu.videoId}
+ │🧚‍♀️➤ Duration : ${anu.timestamp}
+ │🧚‍♀️➤ Viewers : ${anu.views}
+ │🧚‍♀️➤ Uploaded : ${anu.ago}
+ │🧚‍♀️➤ Author : ${anu.author.name}
+ │🧚‍♀️➤ Url : ${anu.url}
+ └─────────❖`,
+ footer: `${global.footer}`,
+ buttons: buttons,
+ headerType: 4,
+ contextInfo:{externalAdReply:{
+ title: anu.title,
+ body: `${global.botname}`,
+ thumbnail: log0,
+ mediaType:2,
+ mediaUrl: anu.url,
+ sourceUrl: anu.url
+ }}
+ }
+ XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+ }
+ break
 case 'dlytv': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
