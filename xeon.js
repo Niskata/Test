@@ -165,8 +165,8 @@ let docs = pickRandom(documents)
 //welcome\\
         let nama = await XeonBotInc.getName(num)
 memb = metadata.participants.length
-XeonWlcm = await getBuffer(`${encodeURIComponent(ppuser)}`)
-XeonLft = await getBuffer(`${encodeURIComponent(ppuser)}`)
+ppusr = await getBuffer(`${encodeURIComponent(ppuser)}`)
+ppusrn = await getBuffer(`ppuser`)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
@@ -186,23 +186,22 @@ XeonLft = await getBuffer(`${encodeURIComponent(ppuser)}`)
 ┃➣|〆 ${xmembers}th 
 ┃➣|〆
 ┃➣|〆 Time:
-┃➣|〆 ${xtime} ${xdate}
+┃➣|〆 ${xdate} ${xtime}
 ┃么|〆
 ╰┅═┅═┅═┅═┅═┅═┅ ⪨`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
 let buttons = [
-{buttonId: `rules`, buttonText: {displayText: 'rules'}, type: 1},
+{buttonId: `rules`, buttonText: {displayText: 'Rules'}, type: 1},
 {buttonId: `command`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
 image: fs.readFileSync('./XeonMedia/theme/wc.jpg'),
-jpegThumbnail:XeonWlcm,
+jpegThumbnail:ppusrn,
 mentions: [num],
-fileLength: 99999999999999,
 caption: xeonbody,
-footer: `${botname}`,
+footer: `${global.footer}`,
 buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
@@ -232,7 +231,7 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 ┃➣|〆 ${xeonmembers}th 
 ┃➣|〆
 ┃➣|〆 Time:
-┃➣|〆 ${xeontime} ${xeondate}
+┃➣|〆 ${xeondate} ${xeontime}
 ┃么|〆
 ╰┅═┅═┅═┅═┅═┅═┅ ⪨`
       //if you copy the code value,
@@ -244,7 +243,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: fs.readFileSync('./XeonMedia/theme/gb.jpg'),
-jpegThumbnail:XeonLft,
+jpegThumbnail:ppusr,
 mentions: [num],
 fileLength: 99999999999999,
 caption: xeonbody,
@@ -338,13 +337,13 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🦄Connection closed, reconnecting...."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🦄Connection Lost from Server, reconnecting..."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🦄Connection Replaced, Another New Session Opened, Please Close Current Session First"); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🦄Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🦄Restart Required, Restarting..."); startXeonBotInc(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🦄Connection TimedOut, Reconnecting..."); startXeonBotInc(); }
-            else XeonBotInc.end(`🦄Unknown DisconnectReason: ${reason}|${connection}`)
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First"); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`Device Logged Out, Please Scan Again And Run.`); XeonBotInc.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Restart Required, Restarting..."); startXeonBotInc(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("Connection TimedOut, Reconnecting..."); startXeonBotInc(); }
+            else XeonBotInc.end(`Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
     })

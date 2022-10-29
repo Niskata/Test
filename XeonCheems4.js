@@ -3156,7 +3156,7 @@ await XeonBotInc.updateProfilePicture(botNumber, { url: media }).catch((err) => 
 replay(mess.success)
 }
 break
-            case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
+            case 'invite': case 'addmem': case 'gclink': case 'grouplink': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
@@ -3255,27 +3255,27 @@ for (let i of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'YouTube',
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'Script',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
-id: 'ping'
+displayText: 'Support Group',
+id: 'wagc'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
-id: 'menu'
+displayText: 'Menu',
+id: 'command'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'Owner',
 id: 'owner'
 }
 }]
@@ -3296,27 +3296,27 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: 'YouTube 🍓',
+displayText: 'YouTube',
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'Script',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
-id: 'ping'
+displayText: 'Support Group',
+id: 'wagc'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
-id: 'menu'
+displayText: 'Menu',
+id: 'command'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'Owner',
 id: 'owner'
 }
 }]
@@ -3338,27 +3338,27 @@ if (!isCreator) return replay(mess.owner)
                     await sleep(1500)
                     let butoon = [{
                                 urlButton: {
-                                displayText: 'YouTube 🍓',
+                                displayText: 'YouTube',
 url: `${global.websitex}`
                                 }
                             }, {
 urlButton: {
-displayText: 'Script 🍜',
+displayText: 'Script',
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: 'Bot Status 🚀',
+displayText: 'Support Group',
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: 'Menu 🐰',
+displayText: 'Menu',
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Owner 😈',
+displayText: 'Owner',
 id: 'owner'
 }
 }]
@@ -4561,7 +4561,7 @@ replay(`Error!`)
 break
 case 'translate': case 'trans': {
 if (isBan) return reply(mess.ban)
-if (!args.join(" ")) return replay("The text?")
+if (!args.join(" ")) return replay("Where is the text?")
 tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
 Infoo = tes.info
 Detek = tes.translate
@@ -5933,7 +5933,7 @@ reply(util.format(anu))
 await fs.unlinkSync(media)
 }
 break
-            case 'imagenobgxxx': case 'removebgxxx': case 'remove-bgxxx': {
+            case 'imagenobgxxx': case 'removebg': case 'remove-bgxxx': {
 	    if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
 	    if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
 	    if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -5958,7 +5958,7 @@ break
 	    })
 	    }
 	    break
-	case 'yts': case 'ytsearch': {
+	case 'yts': case 'getyt': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return replay(`Example : ${prefix + command} stay jb`)
@@ -5988,7 +5988,7 @@ reply(teks)
 })
 }
 break
-case 'gimg': case 'googleimage': {
+case 'img': case 'googleimage': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!args[0]) return reply("What picture are you looking for??")
@@ -7875,7 +7875,7 @@ case 'ttaudxx':{
     XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
    }
  break
-case 'play': case 'music': case 'song': case 'ytplay':{
+case 'play': case 'music': case 'yt': case 'ytplay':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let { yta } = require('./lib/y2mate')
@@ -7884,11 +7884,17 @@ let yts = require("yt-search")
 let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let buf = await getBuffer(anu.thumbnail)
-let caption = `*${themeemoji}TITLE :* ${anu.title}
-*${themeemoji}SIZE :* ${anu.filesize}
-*${themeemoji}URL :* ${anu.url}
-*${themeemoji}DESC :* ${anu.description}
-`
+let caption = `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
+┌─────────❖
+│🧚‍♀️➤ Title : ${anu.title}
+│🧚‍♀️➤ Ext : Search
+│🧚‍♀️➤ ID : ${anu.videoId}
+│🧚‍♀️➤ Duration : ${anu.timestamp}
+│🧚‍♀️➤ Viewers : ${anu.views}
+│🧚‍♀️➤ Uploaded : ${anu.ago}
+│🧚‍♀️➤ Author : ${anu.author.name}
+│🧚‍♀️➤ Url : ${anu.url}
+└─────────❖`
 message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { upload:   XeonBotInc.waUploadToServer })
 const buttons = [
   {buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Audio'}, type: 1},
@@ -7914,11 +7920,17 @@ let yts = require("yt-search")
 let search = await yts(text)
 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let buf = await getBuffer(anu.thumbnail)
-let caption = `*${themeemoji}TITLE :* ${anu.title}
-*${themeemoji}SIZE :* ${anu.filesize}
-*${themeemoji}URL :* ${anu.url}
-*${themeemoji}DESC :* ${anu.description}
-`
+let caption = `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
+┌─────────❖
+│🧚‍♀️➤ Title : ${anu.title}
+│🧚‍♀️➤ Ext : Search
+│🧚‍♀️➤ ID : ${anu.videoId}
+│🧚‍♀️➤ Duration : ${anu.timestamp}
+│🧚‍♀️➤ Viewers : ${anu.views}
+│🧚‍♀️➤ Uploaded : ${anu.ago}
+│🧚‍♀️➤ Author : ${anu.author.name}
+│🧚‍♀️➤ Url : ${anu.url}
+└─────────❖`
 message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { upload:   XeonBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 templateMessage: {
@@ -7993,7 +8005,7 @@ mediaUrl:websitex,
 sourceUrl: websitex }}}, {quoted: m})
 }
 break
-case 'ytmp4': case 'ytvideo': case 'yt': case 'getvideo': case 'youtube': {
+case 'ytmp4': case 'ytvideo': case 'ytd': case 'getvideo': case 'youtube': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let { ytv } = require('./lib/y2mate')
@@ -8015,45 +8027,78 @@ mediaUrl:websitex,
 sourceUrl: websitex }}}, {quoted: m})
 }
 break
-	case 'musicx': case 'playx': case 'songx': case 'yt': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let yts = require("yt-search")
-let search = await yts(text)
-let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-let ytvc = await hx.youtube(anu.url)
-let buttons = [
-{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
-]
-let buttonMessage = {
-image: { url: anu.thumbnail },
-caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
-┌─────────❖
-│🧚‍♀️➤ Title : ${anu.title}
-│🧚‍♀️➤ Ext : Search
-│🧚‍♀️➤ ID : ${anu.videoId}
-│🧚‍♀️➤ Duration : ${anu.timestamp}
-│🧚‍♀️➤ Viewers : ${anu.views}
-│🧚‍♀️➤ Uploaded : ${anu.ago}
-│🧚‍♀️➤ Author : ${anu.author.name}
-│🧚‍♀️➤ Url : ${anu.url}
-└─────────❖`,
-footer: `${global.botname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: anu.title,
-body: `${global.botname}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: anu.url,
-sourceUrl: anu.url
-}}
-}
-XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-}
-break
+case 'dlytv': {
+    if (isBan) return reply(mess.ban)	 			
+ if (isBanChat) return reply(mess.banChat)
+ let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+ let ytvc = await hx.youtube(anu.url)
+ let buttons = [
+ {buttonId: `ytmp4 ${anu.url} 360p`, buttonText: {displayText: '360P'}, type: 1},
+ {buttonId: `ytmp4 ${anu.url} 480p`, buttonText: {displayText: '480P'}, type: 1},
+ {buttonId: `ytmp4 ${anu.url} 720p`, buttonText: {displayText: '720P'}, type: 1}
+ ]
+ let buttonMessage = {
+ image: { url: anu.thumbnail },
+ caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
+ ┌─────────❖
+ │🧚‍♀️➤ Select the qulity
+ │🧚‍♀️➤ And wait
+ │
+ │🧚‍♀️➤ If you didn't get the  
+ │🧚‍♀️➤ YouTube video,
+ │🧚‍♀️➤ Try .ytmp4 (ytvideo link) 360p
+ └─────────❖`,
+ footer: `${global.footer}`,
+ buttons: buttons,
+ headerType: 4,
+ contextInfo:{externalAdReply:{
+ title: anu.title,
+ body: `${global.botname}`,
+ thumbnail: log0,
+ mediaType:2,
+ mediaUrl: anu.url,
+ sourceUrl: anu.url
+ }}
+ }
+ XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+ }
+ break
+ case 'dlyta': {
+    if (isBan) return reply(mess.ban)	 			
+ if (isBanChat) return reply(mess.banChat)
+ let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+ let ytvc = await hx.youtube(anu.url)
+ let buttons = [
+ {buttonId: `ytmp3 ${anu.url} 128kbps`, buttonText: {displayText: 'Audio'}, type: 1},
+ {buttonId: `ytmp4 ${anu.url} 480p`, buttonText: {displayText: '480P'}, type: 1},
+ {buttonId: `docmp3 ${anu.url} 720p`, buttonText: {displayText: 'Doc Audio'}, type: 1}
+ ]
+ let buttonMessage = {
+ image: { url: anu.thumbnail },
+ caption: `❖ 𝙔𝙊𝙐𝙏𝙐𝘽𝙀 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙀𝙍 ❖
+ ┌─────────❖
+ │🧚‍♀️➤ Select the qulity
+ │🧚‍♀️➤ And wait
+ │
+ │🧚‍♀️➤ If you didn't get the  
+ │🧚‍♀️➤ audio,
+ │🧚‍♀️➤ Try .ytmp3 (ytvideo link) 128kbps
+ └─────────❖`,
+ footer: `${global.footer}`,
+ buttons: buttons,
+ headerType: 4,
+ contextInfo:{externalAdReply:{
+ title: anu.title,
+ body: `${global.botname}`,
+ thumbnail: log0,
+ mediaType:2,
+ mediaUrl: anu.url,
+ sourceUrl: anu.url
+ }}
+ }
+ XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+ }
+ break
 case 'playtes2':{
   if (!text) throw `What song are you want find?\n*Example:* ${prefix}play alan walker faded`
   let chat = global.db.data.chats[m.chat]
@@ -8630,7 +8675,7 @@ View List Of Messages With ${prefix}listmsg`)
                 reply('Successful Change To Public Usage')
             }
             break
-            case 'self': {
+            case 'private': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -8818,9 +8863,9 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-teks = `*「 ${global.botname} Script 」*\n\nYouTube: ${global.websitex}\nGitHub: ${global.botscript}\n\nDont forget to donate 🍜`
+teks = `*「 ${global.botname} Script 」*\n\nYouTube: https://www.youtube.com/channel/UCBn2CvFNAGY8Z2z4h_mjekA\nGitHub: https://github.com/Nep-28/NepBotz-MD-1 \n\nDont forget to donate`
 let buttons = [
-{buttonId: `menu`, buttonText: {displayText: 'Menu 🌺'}, type: 1}
+{buttonId: `command`, buttonText: {displayText: 'Menu'}, type: 1}
 ]
 let buttonMessage = {
 image: thum,
@@ -8834,8 +8879,8 @@ title:"I deserve something for my hardwork",
 body: "Click to donate", 
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
-mediaUrl: 'https://telegra.ph/file/8737b098fd5702daeb7e0.jpg',
-sourceUrl: "https://telegra.ph/file/8737b098fd5702daeb7e0.jpg"
+mediaUrl: 'https://telegra.ph/file/1a07a8bef94def40aa1ff.jpg',
+sourceUrl: "https://telegra.ph/file/1a07a8bef94def40aa1ff.jpg"
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -9003,7 +9048,7 @@ case 'pcstick':{
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcstick 91xxxxxxxxxx`)
+if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcstick 94xxxxxxxxxx`)
 xeonOP = { 
         key: { 
             fromMe: false, 
@@ -9027,7 +9072,7 @@ case 'pcvn':{
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
-if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcvn 91xxxxxxxxxx`)
+if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcvn 94xxxxxxxxxx`)
 xeonvn = { 
         key: { 
             fromMe: false, 
@@ -9948,7 +9993,7 @@ const listMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 }
 break
-case 'allmenu':{
+case 'wagc':{
 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 var unicorn = await getBuffer(picak+'All Menu')
@@ -9960,7 +10005,7 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `All Menu Isn't Working`,
+    caption: `SUPPORT GROUP\n\n${global.gc}`,
     footer: `「${botname}」`,
     buttons: buttons,
     headerType: 4
@@ -9981,7 +10026,7 @@ const buttons = [
 const buttonMessage = {
     image: unicorn,
     caption: `╔═══════✪「 OWNER 」	
-╠ ${prefix}self
+╠ ${prefix}private
 ╠ ${prefix}public
 ╠ ${prefix}antitag
 ╠ ${prefix}ban [add/del]
@@ -10020,8 +10065,8 @@ const buttons = [
 const buttonMessage = {
     image: unicorn,
     caption: `╔═══════✪「 GROUP 」	
-╠${prefix}groupsetting
-╠${prefix}grouplink
+╠${prefix}settings
+╠${prefix}invite
 ╠${prefix}ephemeral [option]
 ╠${prefix}setgcpp [image]
 ╠${prefix}setname [text]
