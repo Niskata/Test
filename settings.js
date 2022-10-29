@@ -74,6 +74,7 @@ global.note = "It's Upgrating Time" // ur note
 global.packname = "NepBotz Stickers\n\n\n\n\n\n\n\n\n\n\n🌹⃝⃘̉̉̉̉̉̉🧚ℕ𝕖𝕡𝕥𝕦𝕟𝕖❤️⃝➤⃟̱̱̱̱̄̄̄̄ " //ur sticker watermark packname
 global.author = "🌹⃝⃘̉̉̉̉̉̉🧚ℕ𝕖𝕡𝕥𝕦𝕟𝕖❤️⃝➤⃟̱̱̱̱̄̄̄̄" //ur sticker watermark author
 global.wm = "🌹⃝⃘̉̉̉̉̉̉🧚𝙽𝚎𝚙𝚋𝚘𝚝𝚣 𝚙𝚞𝚋𝚕𝚒𝚌 𝚎𝚍𝚒𝚝𝚘𝚗"
+global.gc = "https://chat.whatsapp.com/Gi47BN7YM30321sUIa7mtT" //ur group to be displayed
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/log0.jpg") //ur thumb pic
