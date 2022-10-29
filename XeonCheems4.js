@@ -8026,7 +8026,7 @@ mediaUrl:websitex,
 sourceUrl: websitex }}}, {quoted: m})
 }
 break
-case 'yt': {
+case 'yxt': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
  let yts = require("yt-search")
@@ -8065,7 +8065,7 @@ case 'yt': {
  XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
  }
  break
-case 'dlytv': {
+case 'video': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
  let yts = require("yt-search")
@@ -8103,7 +8103,7 @@ case 'dlytv': {
  XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
  }
  break
- case 'dlyta': {
+ case 'song': {
     if (isBan) return reply(mess.ban)	 			
  if (isBanChat) return reply(mess.banChat)
  let yts = require("yt-search")
@@ -8112,7 +8112,6 @@ case 'dlytv': {
  let ytvc = await hx.youtube(anu.url)
  let buttons = [
  {buttonId: `ytmp3 ${anu.url} 128kbps`, buttonText: {displayText: 'Audio'}, type: 1},
- {buttonId: `ytmp3 ${anu.url} 480p`, buttonText: {displayText: '480P'}, type: 1},
  {buttonId: `docmp3 ${anu.url}`, buttonText: {displayText: 'Doc Audio'}, type: 1}
  ]
  let buttonMessage = {
