@@ -1,25 +1,3 @@
-//════════════════════════════//
-//If you want to recode, reupload
-//or copy the codes/script,
-//pls give credit
-//no credit? i will take action immediately
-//© 2022 Xeon Bot Inc. Cheems Bot MD
-//Thank you to Lord Buddha, Family and Myself
-//════════════════════════════//
-//recode kar ke youtube pe upload kar rhe hai ya
-//codes copy kar ke apne script me dal rhe
-//hai to, description me xeon ka yt channel
-// ka link paste kr dena as a cradit or github 
-//repo me bhi tag kardena baki jo
-//bhi karna hai apki marzi, thank you!🦄
-//════════════════════════════//
-//If you recode and uploading on your channel
-//or copy pasting the codes in ur script, 
-//i give permission to do as long as you
-//put Xeons youtube channel link in the video
-//description and tag me on githuh repo, 
-//thank you🦄
-//════════════════════════════//
 
 require('./settings')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
@@ -607,7 +585,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@
   if (antiWame)
   if (budy.includes(`wa.me`)) {
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
+bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
@@ -619,7 +597,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@
   if (antiWame)
   if (budy.includes(`http://wa.me`)) {
 if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
+bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
@@ -640,11 +618,11 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@
 //anti bad words by xeon
 if (antiToxic)
 if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend','Dont be toxic']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
 reply(sin)
 if (m.text) {
-bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
+bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
@@ -1115,11 +1093,9 @@ const latensie = speed() - timestampe
 ┌┤➣  𝙸'𝚖 𝙰𝚕𝚒𝚟𝚎 𝙽𝚘𝚠 🎉
 ┃    ╭──────────────
 ┃➣│─「 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎 」
-┃➣│  𝓡𝓾𝓷 𝓣𝓲𝓶𝓮 : ${runtime(process.uptime())}
 ┃➣│  𝓑𝓸𝓽 𝓝𝓪𝓶𝓮 : ${global.botname}
 ┃➣│  𝓞𝔀𝓷𝓮𝓻 𝓝𝓪𝓶𝓮 : ${global.ownername}
 ┃➣│  𝓥𝓮𝓻𝓼𝓲𝓸𝓷 : 𝕧1.𝟘.𝟘
-┃➣│  𝓣𝓸𝓽𝓪𝓵 𝓤𝓼𝓮𝓻𝓼 : ${Object.keys(global.db.data.users).length}
 ┃➣└─「 𝐍𝐎𝐓𝐄 」
 ┃➣│  ${global.note}
 ┃    ╰───────────────
@@ -1951,7 +1927,7 @@ if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { text: `Question : ${q}\nAnswer : How ${ya}` }, { quoted: m })
 
 					break
-case 'rate':
+case 'ratex':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 				if (!text) return replay(`Use Text, Example : ${prefix + command} My Dp`)
@@ -8922,7 +8898,7 @@ headerType: 4,
 contextInfo:{externalAdReply:{
 title:"I deserve something for my hardwork",
 body: "Click to donate", 
-thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
+thumbnail: fs.readFileSync("XeonMedia/theme/log0.jpg"),
 mediaType:1,
 mediaUrl: 'https://telegra.ph/file/1a07a8bef94def40aa1ff.jpg',
 sourceUrl: "https://telegra.ph/file/1a07a8bef94def40aa1ff.jpg"
@@ -8931,7 +8907,7 @@ sourceUrl: "https://telegra.ph/file/1a07a8bef94def40aa1ff.jpg"
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
-case 'tiktokxxx':{
+case 'tiktokx':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
     if (!args[0]) return reply(`Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`)
@@ -8944,7 +8920,7 @@ if (isBanChat) return reply(mess.banChat)
 `.trim(), m)
 }
 break
-case 'tiktokmp3xxx': case 'tiktokaudioxxx': { 	   
+case 'tiktokmp3': case 'tiktokaudioxxx': { 	   
 
 if (!text) throw '*Enter Link Tiktok!*'
 if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) throw '*The link you provided is not valid*'
@@ -9893,7 +9869,7 @@ const buttons = [
 const buttonMessage = {
     image: thumb,
     caption: menulist,
-    footer: `「${botname}」\n📍YouTube: ${websitex}\n🍜Script: ${botscript}`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -9905,7 +9881,7 @@ break
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'allmenu', buttonText: {displayText: 'group'}, type: 1},
+  {buttonId: 'wagc', buttonText: {displayText: 'group'}, type: 1},
   {buttonId: 'command', buttonText: {displayText: 'Menu'}, type: 1},
   {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
@@ -10051,7 +10027,7 @@ const buttons = [
 const buttonMessage = {
     image: unicorn,
     caption: `SUPPORT GROUP\n\n${global.gc}`,
-    footer: `「${botname}」`,
+    footer: `「${global.footer}」`,
     buttons: buttons,
     headerType: 4
 }
@@ -10064,9 +10040,9 @@ case 'ownermenu':{
 	   var unicorn = await getBuffer(picak+'Owner Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script '}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate '}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner '}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10090,7 +10066,7 @@ const buttonMessage = {
 ╠ ${prefix}setppbot [image]
 ╠ ${prefix}setexif
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10103,9 +10079,9 @@ case 'groupmenu':{
 var unicorn = await getBuffer(picak+'Group Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10150,7 +10126,7 @@ const buttonMessage = {
 ╠${prefix}checkvote
 ╠${prefix}delvote
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10183,7 +10159,7 @@ const buttonMessage = {
 ╠${prefix}inventory
 ╠${prefix}leaderboard
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10311,7 +10287,7 @@ const buttonMessage = {
 ╠ ${prefix}watercolor
 ╠ ${prefix}classic
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10352,7 +10328,7 @@ const buttonMessage = {
 ╠${prefix}soundcloud [url]
 ╠${prefix}zippyshare [url]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10398,7 +10374,7 @@ const buttonMessage = {
 ╠ ${prefix}mcserver [ip|port]
 ╠${prefix}drakor [query]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10447,7 +10423,7 @@ const buttonMessage = {
 ╠${prefix}slow [reply aud]
 ╠${prefix}squirrel [reply aud]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10480,7 +10456,7 @@ const buttonMessage = {
 ╠${prefix}pediaemoji
 ╠${prefix}microsoftemoji
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10515,7 +10491,7 @@ const buttonMessage = {
 ╠${prefix}deleteeffect
 ╠${prefix}pixelate
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10541,7 +10517,7 @@ const buttonMessage = {
 ╠ ${prefix}attp
 ╠ ${prefix}ttp
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10619,7 +10595,7 @@ const buttonMessage = {
 ╠ ${prefix}dumbass
 ╠ ${prefix}crackhead
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10801,7 +10777,7 @@ const buttonMessage = {
 ╠ ${prefix}sound160
 ╠ ${prefix}sound161
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10829,7 +10805,7 @@ const buttonMessage = {
 ╠ ${prefix}math [mode]
 ╠ ${prefix}suitpvp [tag]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10854,7 +10830,7 @@ const buttonMessage = {
 ╠${prefix}next
 ╠${prefix}leave
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10877,7 +10853,7 @@ const buttonMessage = {
 ╠ ${prefix}fliptext [text]
 ╠ ${prefix}toletter [number]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10906,7 +10882,7 @@ const buttonMessage = {
 ╠ ${prefix}getmsg
 ╠ ${prefix}delmsg
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -10945,7 +10921,7 @@ const buttonMessage = {
 ╠ ${prefix}request
 ╠ ${prefix}report [bug]
 ╚═════════════✪`,
-    footer: `「${botname}」`,
+    footer: `${global.footer}`,
     buttons: buttons,
     headerType: 4
 }
@@ -11025,8 +11001,8 @@ break
         }
         
         //anti-tag
-///////////const listTag = [`${global.ownertag}@s.whatsapp.net`]
-////////////////const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
+//const listTag = [`${global.ownertag}@s.whatsapp.net`]
+////const partiNum = (m.mtype === 'extendedTextMessage') ? m.message.extendedTextMessage.contextInfo.participant : ''
 //anti-tag 2
 //////////if (listTag.includes(partiNum)) {
 ///////if (antitags === false) return
