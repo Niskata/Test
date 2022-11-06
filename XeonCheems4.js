@@ -6456,38 +6456,6 @@ for (var x of kontol) {
 }
 reply(ini_txt)
 break
-		//case 'upnow':
-  
-  ///  await git.fetch();
-    ///var commits = await git.log(['main' + '..origin/' + 'main']);
-    //if (commits.total === 0) {
-    ///  return await XeonBotInc.sendMessage(m.chat, { text:"_Bot up to date_"})
-    //} else {
-    //  await XeonBotInc.sendMessage(m.chat, {text: "_Build started ⏫_"})
-     /// try {
-     ///   var app = await heroku.get('/apps/' + Config.HEROKU_APP_NAME)
-   ///     var git_url = await heroku.get(app.git_url)
-  //  } catch {
-   ///     await XeonBotInc.sendMessage(m.chat, { text:"*Heroku app name/api key wrong*"})
-
-      ///  await new Promise(r => setTimeout(r, 1000));
-      }
-    ///  git.fetch('upstream', 'main');
-    ///  git.reset('hard', ['FETCH_HEAD']);//lols
-
-    ///git_url =  git_url.replace("https://", "https://api:" + Config.HEROKU_API_KEY + "@")//drips
-    ///  try {
-    //    await git.addRemote('heroku', git_url);
-   // } catch {console.log('Deploy error catched. Retrying...')}
-  //  try { await git.push('heroku', 'main'); } catch(e){ 
-   // if (e.message.includes("concurrent")) return reply("Your account has reached in-parallel build limit! Please wait for the other app to finish its deploy"); 
-   // }
-   /// await XeonBotInc.sendMessage(m.chat, {text:"_Finished build! Restarting.._"})
- //
-
- /// }
-
-///break
 case 'apk': case 'apkmod': case 'apkdl': {      
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -6851,7 +6819,7 @@ xeonkey.Film(q)
                XeonBotInc.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
 break
-case 'img':
+case 'gimg':
 case 'image': {
 	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
