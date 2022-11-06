@@ -6440,6 +6440,54 @@ if (isBanChat) return reply(mess.banChat)
             XeonBotInc.sendImage(m.chat, thumb, capt, m)
             }
             break
+		case 'gapk':
+if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  if (!text) return reply(`Use${prefix + command} pubg`) 
+query = args.join(' ')
+get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/apkgoogle?apps=${query}&page=1&apikey=77f2a56753e34985b740`, { method: 'get' })
+kontol = get_result.result
+ini_txt = '❰ *APPLICATIONS* ❱\n\n'
+for (var x of kontol) {
+  ini_txt += `Name : ${x.apps_name}\n`
+  ini_txt += `Link :${x.apps_linkdl}\n`
+  ini_txt += `Tag : ${x.apps_tag}\n`
+  ini_txt += `\n`
+}
+reply(ini_txt)
+break
+		//case 'upnow':
+  
+  ///  await git.fetch();
+    ///var commits = await git.log(['main' + '..origin/' + 'main']);
+    //if (commits.total === 0) {
+    ///  return await XeonBotInc.sendMessage(m.chat, { text:"_Bot up to date_"})
+    //} else {
+    //  await XeonBotInc.sendMessage(m.chat, {text: "_Build started ⏫_"})
+     /// try {
+     ///   var app = await heroku.get('/apps/' + Config.HEROKU_APP_NAME)
+   ///     var git_url = await heroku.get(app.git_url)
+  //  } catch {
+   ///     await XeonBotInc.sendMessage(m.chat, { text:"*Heroku app name/api key wrong*"})
+
+      ///  await new Promise(r => setTimeout(r, 1000));
+      }
+    ///  git.fetch('upstream', 'main');
+    ///  git.reset('hard', ['FETCH_HEAD']);//lols
+
+    ///git_url =  git_url.replace("https://", "https://api:" + Config.HEROKU_API_KEY + "@")//drips
+    ///  try {
+    //    await git.addRemote('heroku', git_url);
+   // } catch {console.log('Deploy error catched. Retrying...')}
+  //  try { await git.push('heroku', 'main'); } catch(e){ 
+   // if (e.message.includes("concurrent")) return reply("Your account has reached in-parallel build limit! Please wait for the other app to finish its deploy"); 
+   // }
+   /// await XeonBotInc.sendMessage(m.chat, {text:"_Finished build! Restarting.._"})
+ //
+
+ /// }
+
+///break
 case 'apk': case 'apkmod': case 'apkdl': {      
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -6587,41 +6635,6 @@ if (isBanChat) return reply(mess.banChat)
                 XeonBotInc.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname},For my Darling ` }, { quoted: m })
              }
              break
-            case 'drakorxxx':
-               if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply('What Are You Looking For??')
-                await reply(mess.wait)
-                xeonkey.Drakor(`${text}`).then(async data => {
-                    let txt = `*-----「 DRAKOR-SEARCH 」-----*\n\n`
-                    for (let i of data) {
-                        txt += `*📫 Title :* ${i.judul}\n`
-                        txt += `*📆 Years :* ${i.years}\n`
-                        txt += `*🎥 Genre :* ${i.genre}\n`
-                        txt += `*📚 Url :* ${i.url}\n-----------------------------------------------------\n`
-                    }
-                    await sendFileFromUrl(from,data[0].thumbnail,txt,m)
-                })
-                .catch((err) => {
-                    reply(mess.error)
-                })
-            break
-            case 'drakor': {
-            	            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(`Example : ${prefix + command} love`)
-            let res = await fetchJson(`https://zenzapis.xyz/webzone/drakor?query=${text}&apikey=hdiiofficial`)
-            let capt = `Drakor Search From : ${text}\n\n`
-            for (let i of res.result) {
-            capt += `${themeemoji} Title: ${i.judul}\n`
-            capt += `${themeemoji} Years: ${i.years}\n`
-            capt += `${themeemoji} Genre: ${i.genre}\n`
-            capt += `${themeemoji} Url: ${i.url}\n`
-            capt += `${themeemoji} Thumbnail Url: ${i.thumbnail}\n\n──────────────────────\n`
-            }
-            XeonBotInc.sendImage(m.chat, res.result[0].thumbnail, capt, m)
-            }
-            break
             case 'animexxx':{
             	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -6664,7 +6677,7 @@ if (isBanChat) return reply(mess.banChat)
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "YouTube",
 						"url": `${websitex}`
 						}
 					}
@@ -6690,7 +6703,7 @@ if (isBanChat) return reply(mess.banChat)
                     var but = [
 				{
 					"urlButton": {
-						"displayText": "YouTube📍",
+						"displayText": "YouTube",
 						"url": `${websitex}`
 						}
 					}
@@ -6787,10 +6800,10 @@ case 'lyrics': {
 	const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
     const result = await lyricsv2(text).catch(async _ => await lyrics(text))
     reply(`
-${themeemoji} Title : *${result.title}*
-${themeemoji} Author : ${result.author}
-${themeemoji} Lyrics : ${result.lyrics}
-${themeemoji} Url : ${result.link}
+Title : *${result.title}*
+Author : ${result.author}
+Lyrics : ${result.lyrics}
+Url : ${result.link}
 `.trim())
 }
 break
@@ -6802,14 +6815,6 @@ var { Waktu, Lintang, Bujur, Magnitude, Kedalaman, Wilayah, Map } = tres.result
 console.log(Map)
 const captt = `Time : ${Waktu}\nLatitude : ${Lintang}\nLongitude : ${Bujur}\nRegion : ${Wilayah}`
 XeonBotInc.sendMessage(from, { image : { url : Map }, caption : captt})
-break
-case 'covidindo':
-case 'covid':
-if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-const c = await covid()
-var { kasus, kematian, sembuh } = c[0]
-XeonBotInc.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed : ${sembuh}`}, m)
 break
 case 'tvschedule':
 if (isBan) return reply(mess.ban)	 			
@@ -6983,25 +6988,6 @@ XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 })
 }
 break
-case 'fajar-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-FajarNews().then(async(res) => {
-console.log(res) 
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-replay(teks) 
-})
-break
 case "quotes":
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -7020,365 +7006,6 @@ var res = await Darkjokes()
 teks = "\nDarkjokes*"
 XeonBotInc.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : m })
 break
-case 'cnn-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-CNNNews().then(res => {
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-replay(teks) 
-})
-break
-case 'tvsearch':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!q) return reply('Where is the title?') 
-LayarKaca21(q).then(async(res) => {
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-  no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `Film: ${i.film_title}\n`
-teks += `Link: ${i.film_link}\n`
-}
-teks += `══════════════════`
-replay(teks) 
-})
-break
-case 'cnbc-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-CNBCNews().then(async(res) => {
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-case 'tribun-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-TribunNews().then(async(res) => {
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-})
-break
-case 'indozone-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-IndozoneNews().then(async(res) => {
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-})
-break
-case 'kompas-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-KompasNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-case 'detik-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-DetikNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-case 'daily-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-DailyNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-
-case 'inews-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-iNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-replay(teks) 
-})
-break
-case 'okezone-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-OkezoneNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-
-case 'sindo-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-SindoNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-replay(teks) 
-})
-break
-case 'tempo-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-TempoNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-case 'antara-news':
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-AntaraNews().then(async(res) => {
-
-no = 0
-teks = "══════════════════"
-for (let i of res) {
-no += 1
-teks += `\n• ${no.toString()} •\n`
-teks += `News: ${i.berita}\n`
-teks += `Upload: ${i.berita_diupload}\n`
-teks += `Type: ${i.berita_jenis}\n`
-teks += `Link: ${i.berita_url}\n`
-}
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-})
-break
-
-case "kontan-news":
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-  KontanNews().then(async (res) => {
-    
-    teks = "══════════════════"
-    no = 0
-    for (let i of res) {
-      no += 1
-      teks += `\n• ${no.toString()} •\n`
-      teks += `News: ${i.berita}\n`
-      teks += `Type: ${i.berita_jenis}\n`
-      teks += `Upload: ${i.berita_diupload}\n`
-      teks += `Link: ${i.berita_url}\n`
-    }
-    teks += "══════════════════"
-    XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-  })
-  break
-case "merdeka-news":
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-  MerdekaNews().then(async (res) => {
-    
-    teks = "══════════════════"
-    no = 0
-    for (let i of res) {
-      no += 1
-      teks += `\n• ${no.toString()} •\n`
-      teks += `News: ${i.berita}\n`
-      teks += `Upload: ${i.berita_diupload}\n`
-      teks += `Link: ${i.berita_url}\n`
-    }
-    teks += "══════════════════"
-    XeonBotInc.sendMessage(m.chat, { image : { url : res[0].berita_thumb }, caption: teks }, { quoted : m })
-
-  })
-  break
-
-case "jalantikus-meme":
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-  var res = await JalanTikusMeme()
-teks = "══════════════════"
-teks += "\nLaughing out loud?🥴\n"
-teks += `\nSource: ${res}\n`
-teks += "══════════════════"
-XeonBotInc.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : m })
-break
-            case 'cinemaschedule': {
-            	            	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(`Example: ${prefix + command} jakarta`)
-            let res = await fetchJson(`https://zenzapis.xyz/webzone/jadwalbioskop?kota=${text}&apikey=hdiiofficial`)
-            let capt = `Jadwal Bioskop From : ${text}\n\n`
-            for (let i of res.result){
-            capt += ` Title: ${i.title}\n`
-            capt += ` Thumbnail: ${i.thumb}\n`
-            capt += ` Url: ${i.url}\n\n──────────────────────\n`
-            }
-            XeonBotInc.sendImage(m.chat, res.result[0].thumb, capt, m)
-            }
-            break
-case 'shortstoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(`*List*\n${prefix}shortstory Anak\n${prefix}shortstory Bahasa Daerah\n${prefix}shortstory Bahasa Inggris\n${prefix}shortstory Bahasa Jawa\n${prefix}shortstory Bahasa Sunda\n${prefix}shortstory Budaya\n${prefix}shortstory Cinta\n${prefix}shortstory Cinta Islami\n${prefix}shortstory Cinta Pertama\n${prefix}shortstory Cinta Romantis\n${prefix}shortstory Cinta Sedih\n${prefix}shortstory Cinta Segitiga\n${prefix}shortstory Cinta Sejati\n${prefix}shortstory Galau\n${prefix}shortstory Gokil\n${prefix}shortstory Inspiratif\n${prefix}shortstory Jepang\n${prefix}shortstory Kehidupan\n${prefix}shortstory Keluarga\n${prefix}shortstory Kisah Nyata\n${prefix}shortstory Korea\n${prefix}shortstory Kristen\n${prefix}shortstory Liburan\n${prefix}shortstory Lingkungan\n${prefix}shortstory Lucu\n${prefix}shortstory Malaysia\n${prefix}shortstory Mengharukan\n${prefix}shortstory Misteri\n${prefix}shortstory Motivasi\n${prefix}shortstory Nasihat\n${prefix}shortstory Nasionalisme\n${prefix}shortstory Olahraga\n${prefix}shortstory Patah Hati\n${prefix}shortstory Penantian\n${prefix}shortstory Pendidikan\n${prefix}shortstory Pengalaman Pribadi\n${prefix}shortstory Pengorbanan\n${prefix}shortstory Penyesalan\n${prefix}shortstory Perjuangan\n${prefix}shortstory Perpisahan\n${prefix}shortstory Persahabatan\n${prefix}shortstory Petualangan\n${prefix}shortstory Ramadhan\n${prefix}shortstory Remaja\n${prefix}shortstory Renungan\n${prefix}shortstory Rindu\n${prefix}shortstory Rohani\n${prefix}shortstory Romantis\n${prefix}shortstory Sastra\n${prefix}shortstory Sedih\n${prefix}shortstory Sejarah\n${prefix}shortstory Slice Of Life\n${prefix}shortstory Terjemahan\n${prefix}shortstory Thriller`)
-let cerpe = await cerpen(q)
-reply(`${global.themeemoji} _*Title :*_ ${cerpe.title}\n${global.themeemoji} _*Author :*_ ${cerpe.author}\n${global.themeemoji} _*Category :*_ ${cerpe.kategori}\n${global.themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${global.themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-case 'loveshortstoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let cerpe = await cerpen(`Cinta segitiga`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-case 'islamicshortstoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let cerpe = await cerpen(`Cinta segitiga`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-case 'disturbingshorystoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let cerpe = await cerpen(`galau`)
-       reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-case 'friendshipshortstoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let cerpe = await cerpen(`persahabatan`)
-        reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-case 'sacrificeshortstoryx':{
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-let cerpe = await cerpen(`Pengorbanan`)
-reply(`${themeemoji} _*Title :*_ ${cerpe.title}\n${themeemoji} _*Author :*_ ${cerpe.author}\n${themeemoji} _*Category :*_ ${cerpe.kategori}\n${themeemoji} _*Pass Moderation :*_ ${cerpe.lolos}\n${themeemoji} _*Story :*_\n${cerpe.cerita}`)
-}
-break
-	    case 'couplepp':  case 'ppcouple': {
-		   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-                reply(mess.wait)
-                let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
-                let random = anu[Math.floor(Math.random() * anu.length)]
-                XeonBotInc.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male🙎🏻‍♂️` }, { quoted: m })
-                XeonBotInc.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female🙎🏻‍♀️` }, { quoted: m })
-            }
-	    break
             case 'animequotes': case 'animequote': {
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -9799,7 +9426,7 @@ user.afkReason = text
 reply(`🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot ${m.pushName} ${text ? ': ' + text : ''}`)
 }
 break
-  case 'bye_bye ':{
+  case 'virusx':{
            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
@@ -9862,7 +9489,7 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'allmenu', buttonText: {displayText: 'All Menu'}, type: 1},
+  {buttonId: 'wagc', buttonText: {displayText: 'Group'}, type: 1},
   {buttonId: 'command', buttonText: {displayText: 'List Menu'}, type: 1},
   {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
@@ -10040,9 +9667,9 @@ case 'ownermenu':{
 	   var unicorn = await getBuffer(picak+'Owner Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script '}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate '}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner '}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10053,7 +9680,7 @@ const buttonMessage = {
 ╠ ${prefix}ban [add/del]
 ╠ ${prefix}banchat [on/off]
 ╠ ${prefix}join [link]
-╠ ${prefix}leavegc
+╠ ${prefix}left
 ╠ ${prefix}setbio
 ╠ ${prefix}block [user]
 ╠ ${prefix}unblock [user]
@@ -10140,9 +9767,9 @@ case 'rpgmenu':
 var unicorn = await getBuffer(picak+'Rpg Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10172,9 +9799,9 @@ case 'makermenu':{
 var unicorn = await getBuffer(picak+'Maker Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10300,9 +9927,9 @@ case 'downloadmenu':{
 var unicorn = await getBuffer(picak+'Download Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10341,9 +9968,9 @@ case 'searchmenu':{
 var unicorn = await getBuffer(picak+'Search Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10387,9 +10014,9 @@ case 'convertmenu':{
 var unicorn = await getBuffer(picak+'Convert Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10436,9 +10063,9 @@ case 'emotemenu':{
 var unicorn = await getBuffer(picak+'Emote Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10469,9 +10096,9 @@ case 'imageeffectmenu':{
 var unicorn = await getBuffer(picak+'Image Effect Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10504,9 +10131,9 @@ case 'stickermenu':{
 var unicorn = await getBuffer(picak+'Sticker Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10530,9 +10157,9 @@ case 'funmenu':{
 var unicorn = await getBuffer(picak+'Fun Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10608,9 +10235,9 @@ case 'soundmenu':{
 var unicorn = await getBuffer(picak+'Sound Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10790,9 +10417,9 @@ case 'gamemenu':{
 var unicorn = await getBuffer(picak+'Game Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10818,9 +10445,9 @@ case 'anonymousmenu':{
 var unicorn = await getBuffer(picak+'Anonymous Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10842,9 +10469,9 @@ case 'toolmenu':{
 var unicorn = await getBuffer(picak+'Tool Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10866,9 +10493,9 @@ case 'databasemenu':{
 var unicorn = await getBuffer(picak+'Database Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
@@ -10895,9 +10522,9 @@ case 'othermenu':{
 var unicorn = await getBuffer(picak+'Other Menu')
 XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
 const buttons = [
-  {buttonId: 'script', buttonText: {displayText: 'Script 🔖'}, type: 1},
-  {buttonId: 'donate', buttonText: {displayText: 'Donate 🍵'}, type: 1},
-  {buttonId: 'owner', buttonText: {displayText: 'Owner 🤣'}, type: 1}
+  {buttonId: 'script', buttonText: {displayText: 'Script'}, type: 1},
+  {buttonId: 'donate', buttonText: {displayText: 'Donate'}, type: 1},
+  {buttonId: 'owner', buttonText: {displayText: 'Owner'}, type: 1}
 ]
 const buttonMessage = {
     image: unicorn,
