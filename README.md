@@ -13,12 +13,9 @@
 
 # ```support```
 
-<h1 align="center">
 <a href="sorry.no.video"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://www.youtube.com/c/BOTINDO" />
  
  <a href="https://chat.whatsapp.com/BxX8PJpOv7iCsqob9CzWQ3"><img src="https://img.shields.io/badge/Join Support Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /><br>
-<p align="center">
-</p>
 
 ------
 
