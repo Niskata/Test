@@ -31,7 +31,7 @@ global.APIs = {
 
 //Api Key\\
 global.APIKeys = {
-	'https://zenzapis.xyz': 'your key',
+	'https://zenzapis.xyz': '5d1197db351b',
 }
 
 
@@ -54,27 +54,27 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.vcardowner = ['94702476028'] //ur owner number
-global.ownername = "🌹⃝⃘̉̉̉̉̉̉🧚ℕ𝕖𝕡𝕥𝕦𝕟𝕖❤️⃝➤⃟̱̱̱̱̄̄̄̄" //ur owner name
-global.ytname = "Youtube: Neptune" //ur yt chanel name
-global.socialm = "GitHub: Nep-28" //ur github or insta name
+global.vcardowner = ['6282327759039'] //ur owner number
+global.ownername = "Niskata" //ur owner name
+global.ytname = "IG: xKurokochi_" //ur yt chanel name
+global.socialm = "Tiktok: _xkurokochi" //ur github or insta name
 global.location = "Sri Lanka, Southern Province, Galle" //ur location
 
 //bot bomdy 
-global.owner = ['94702476028']
-global.ownertag = '94702476028' //ur tag number
-global.botname = '🦋⃝❉⃟࿔ꦿℕ𝕖𝕡𝔹𝕠𝕥𝕫۝⃟̥̩̩̩̥̩̥͚̮💍' //ur bot name
-global.footer = '🌹⃝⃘̉̉̉̉̉̉🧚𝙽𝚎𝚙𝚋𝚘𝚝𝚣 𝚙𝚞𝚋𝚕𝚒𝚌 𝚎𝚍𝚒𝚝𝚘𝚗' // ur footer
-global.linkz = "https://github.com/Nep-28/NepBotz-MD-1" //your theme url which will be displayed on whatsapp
-global.websitex = "https://github.com/Nep-28/NepBotz-MD-1" //ur website to be displayed
+global.owner = ['6282327759039']
+global.ownertag = '6282327759039' //ur tag number
+global.botname = 'Kon-Bot' //ur bot name
+global.footer = 'Kon-Bot' // ur footer
+global.linkz = "https://instagram/xkurokochi_" //your theme url which will be displayed on whatsapp
+global.websitex = "https://instagram/xkurokochi_ //ur website to be displayed
 global.botscript = 'Nothing' //script link
 global.reactmoji = "✅" //ur menu react emoji
 global.themeemoji = "🐱" //ur theme emoji
 global.note = "It's Upgrating Time" // ur note
-global.packname = "NepBotz Stickers\n\n\n\n\n\n\n\n\n\n\n🌹⃝⃘̉̉̉̉̉̉🧚ℕ𝕖𝕡𝕥𝕦𝕟𝕖❤️⃝➤⃟̱̱̱̱̄̄̄̄ " //ur sticker watermark packname
-global.author = "🌹⃝⃘̉̉̉̉̉̉🧚ℕ𝕖𝕡𝕥𝕦𝕟𝕖❤️⃝➤⃟̱̱̱̱̄̄̄̄" //ur sticker watermark author
-global.wm = "🌹⃝⃘̉̉̉̉̉̉🧚𝙽𝚎𝚙𝚋𝚘𝚝𝚣 𝚙𝚞𝚋𝚕𝚒𝚌 𝚎𝚍𝚒𝚝𝚘𝚗"
-global.gc = "https://chat.whatsapp.com/Gi47BN7YM30321sUIa7mtT" //ur group to be displayed
+global.packname = "Kon-Bot Stickers\n\n\n\n\n\n\n\n\n\n\n6285801284666 " //ur sticker watermark packname
+global.author = "🌹Niskata" //ur sticker watermark author
+global.wm = "🌹⃝⃘̉̉̉̉̉̉Niskata"
+global.gc = "gak punya" //ur group to be displayed
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/log0.jpg") //ur thumb pic
@@ -83,7 +83,7 @@ global.err4r = fs.readFileSync("./XeonMedia/theme/ea404.jpg") //ur error pic
 global.thumb = fs.readFileSync("./XeonMedia/theme/log0.jpg") //ur thumb pic
 
 //damtabase
-global.premium = ['94702476028'] //ur premium numbers
+global.premium = ['6282327759039'] //ur premium numbers
 global.ntilinkytvid = []
 global.ntilinkytch = []
 global.ntilinkig = []
